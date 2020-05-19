@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <Reference Include="CoreObject">
-      <HintPath>..\..\my8.ShareObject\CoreObject\bin\Debug\netcoreapp2.2\CoreObject.dll</HintPath>
+      <HintPath>..\..\shareobject\CoreObject\bin\Debug\netcoreapp2.2\CoreObject.dll</HintPath>
     </Reference>
   </ItemGroup>
 

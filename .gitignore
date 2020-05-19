@@ -1,3 +1,5 @@
 /.vs
 /CoreRepository/obj
 /CoreRepository/bin
+/CoreBusiness/obj
+/CoreBusiness/bin
