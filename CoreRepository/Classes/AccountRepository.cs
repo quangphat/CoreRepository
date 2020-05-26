@@ -34,7 +34,7 @@ namespace CoreRepository.Classes
                 return string.Empty;
             }
         }
-        public async Task<MongoAccount> Get(string id)
+        public async Task<MongoAccount> GetByIdAsync(string id)
         {
             _filter = Builders<MongoAccount>.Filter.Eq(p => p.PersonId, id);
             return await _collection.Find(_filter).FirstOrDefaultAsync();

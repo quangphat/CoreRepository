@@ -1,7 +1,4 @@
-﻿using my8ViewObject;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
 namespace CoreBusiness
 {

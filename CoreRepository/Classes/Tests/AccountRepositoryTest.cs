@@ -46,9 +46,9 @@ namespace CoreRepository.Classes.Tests
             throw new NotImplementedException();
         }
 
-        public Task<MongoAccount> Get(string id)
+        public Task<MongoAccount> GetByIdAsync(string id)
         {
-            throw new NotImplementedException();
+            return Task.FromResult(_account.Where(p => p.PersonId == id).FirstOrDefault());
         }
 
         public async Task<MongoAccount> GetByEmail(string email)

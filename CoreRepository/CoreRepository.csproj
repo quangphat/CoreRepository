@@ -10,8 +10,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="CoreObject">
-      <HintPath>..\..\shareobject\CoreObject\bin\Debug\netcoreapp2.2\CoreObject.dll</HintPath>
+    <Reference Include="my8ShareObject">
+      <HintPath>..\..\my8.ShareObject\my8ShareObject\bin\Debug\netcoreapp2.2\my8ShareObject.dll</HintPath>
     </Reference>
   </ItemGroup>
 

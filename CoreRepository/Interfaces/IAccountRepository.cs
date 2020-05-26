@@ -1,16 +1,14 @@
-﻿using CoreObject;
-using CoreObject.Mongo;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-
+using CoreObject.Mongo;
 namespace CoreRepository.Interfaces
 {
     public interface IAccountRepository
     {
         Task<string> Create(MongoAccount account);
-        Task<MongoAccount> Get(string id);
+        Task<MongoAccount> GetByIdAsync(string id);
         Task<MongoAccount> GetByProfileName(string profileName);
         Task<bool> Update(MongoAccount account);
         Task<bool> ChangePass(string newPass, string salt, string personId);
