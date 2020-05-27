@@ -11,7 +11,7 @@ namespace CoreRepository.Classes.Tests
 {
     public class AccountRepositoryTest : IAccountRepository
     {
-        private readonly List<MongoAccount> _account = new List<MongoAccount> {
+        private readonly List<MongoAccount> _accounts = new List<MongoAccount> {
             new MongoAccount{
                 PersonId = "1",
                 Email = "quangphat@gmail.com",
@@ -27,7 +27,13 @@ namespace CoreRepository.Classes.Tests
             {
                 PersonId ="2",
                 Email = "mongnhan@gmail.com",
-                Password = "mongnhan"
+                Password = "mongnhan",
+                ProjectId="greencode",
+                DisplayName ="mộng nhàn",
+                Avatar ="",
+                Role="admin",
+                WorkAs = "greencode",
+                IsComfirmEmail = true
             }
         };
 
@@ -48,12 +54,12 @@ namespace CoreRepository.Classes.Tests
 
         public Task<MongoAccount> GetByIdAsync(string id)
         {
-            return Task.FromResult(_account.Where(p => p.PersonId == id).FirstOrDefault());
+            return Task.FromResult(_accounts.Where(p => p.PersonId == id).FirstOrDefault());
         }
 
         public async Task<MongoAccount> GetByEmail(string email)
         {
-            return _account.Where(p => p.Email == email).FirstOrDefault();
+            return _accounts.Where(p => p.Email == email).FirstOrDefault();
         }
 
         public Task<MongoAccount> GetByProfileName(string profileName)
@@ -68,7 +74,7 @@ namespace CoreRepository.Classes.Tests
 
         public Task<MongoAccount> Login(string email)
         {
-            throw new NotImplementedException();
+            return Task.FromResult(_accounts.Where(p => p.Email == email).FirstOrDefault());
         }
 
         public Task<bool> SaveJobSkill(string[] skills, string personId)
